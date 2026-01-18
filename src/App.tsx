@@ -1,124 +1,75 @@
-function App() {
-  return (
-    <div style={{ fontFamily: "Arial, sans-serif" }}>
+import "./App.css";
 
-      {/* HERO */}
-      <section style={{
-        background: "linear-gradient(135deg, #0B3C8A, #0A5ED7)",
-        color: "#fff",
-        padding: "90px 20px",
-        textAlign: "center"
-      }}>
-        <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
-          CT Construtower LTDA
-        </h1>
-        <p style={{ fontSize: "20px", opacity: 0.9 }}>
-          Construindo seus sonhos com qualidade e confiança
-        </p>
-        <a
-          href="https://wa.me/55SEUNUMEROAQUI"
-          style={{
-            display: "inline-block",
-            marginTop: "30px",
-            backgroundColor: "#fff",
-            color: "#0B3C8A",
-            padding: "15px 30px",
-            borderRadius: "6px",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}
-        >
-          Solicitar Orçamento
-        </a>
-      </section>
+export default function App() {
+  return (
+    <div>
+      {/* TOPO */}
+      <header className="hero">
+        <h1>CT Construtower LTDA</h1>
+        <p>Construção Residencial e Comercial</p>
+        <span>Construindo seus sonhos com qualidade e segurança</span>
+        <a href="#contato" className="btn">Solicitar Orçamento</a>
+      </header>
 
       {/* SOBRE */}
-      <section style={{ padding: "60px 20px", maxWidth: "1100px", margin: "auto" }}>
+      <section className="section dark">
         <h2>Sobre a Empresa</h2>
-        <p style={{ fontSize: "17px", lineHeight: 1.6 }}>
+        <p>
           A <strong>CT Construtower LTDA</strong> atua no setor da construção civil,
-          oferecendo soluções completas em obras residenciais e comerciais,
-          reformas e acabamentos, sempre com qualidade, segurança e compromisso.
+          oferecendo soluções completas em obras residenciais, comerciais e reformas.
+          Trabalhamos com qualidade, segurança, prazo e compromisso,
+          atendendo toda a região do Estado de São Paulo.
         </p>
       </section>
 
       {/* SERVIÇOS */}
-      <section style={{ backgroundColor: "#f4f6f8", padding: "60px 20px" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
-          Nossos Serviços
-        </h2>
+      <section className="section">
+        <h2>Nossos Serviços</h2>
+        <ul className="services">
+          <li>Construção Residencial</li>
+          <li>Construção Comercial</li>
+          <li>Reformas em Geral</li>
+          <li>Acabamento</li>
+          <li>Pintura</li>
+          <li>Elétrica e Hidráulica</li>
+          <li>Serviços Personalizados</li>
+        </ul>
+      </section>
 
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "20px",
-          maxWidth: "1100px",
-          margin: "auto"
-        }}>
-          {[
-            "Construção Residencial",
-            "Construção Comercial",
-            "Reformas",
-            "Acabamento",
-            "Pintura",
-            "Elétrica e Hidráulica",
-            "Serviços Personalizados"
-          ].map((servico) => (
-            <div key={servico} style={{
-              backgroundColor: "#fff",
-              padding: "25px",
-              borderRadius: "8px",
-              boxShadow: "0 4px 10px rgba(0,0,0,0.08)"
-            }}>
-              <h3>{servico}</h3>
-              <p>
-                Atendimento profissional com equipe qualificada e materiais de
-                qualidade.
-              </p>
-            </div>
-          ))}
+      {/* PORTFÓLIO */}
+      <section className="section dark">
+        <h2>Obras Realizadas</h2>
+        <p>
+          Confira algumas obras executadas pela CT Construtower LTDA.
+          Compromisso, qualidade e acabamento profissional.
+        </p>
+        <div className="portfolio">
+          <div className="obra">Obra 1</div>
+          <div className="obra">Obra 2</div>
+          <div className="obra">Obra 3</div>
         </div>
       </section>
 
-      {/* CTA FINAL */}
-      <section style={{
-        backgroundColor: "#0B3C8A",
-        color: "#fff",
-        padding: "50px 20px",
-        textAlign: "center"
-      }}>
-        <h2>Construa com quem entende</h2>
-        <p>Entre em contato agora e solicite seu orçamento</p>
-        <a
-          href="https://wa.me/55SEUNUMEROAQUI"
-          style={{
-            display: "inline-block",
-            marginTop: "20px",
-            backgroundColor: "#fff",
-            color: "#0B3C8A",
-            padding: "14px 28px",
-            borderRadius: "6px",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}
-        >
-          Falar no WhatsApp
-        </a>
+      {/* CONTATO */}
+      <section id="contato" className="section">
+        <h2>Solicite um Orçamento</h2>
+        <form className="form">
+          <input type="text" placeholder="Nome" />
+          <input type="text" placeholder="WhatsApp" />
+          <input type="text" placeholder="Tipo de serviço" />
+          <textarea placeholder="Descreva seu projeto"></textarea>
+          <button>Enviar</button>
+        </form>
       </section>
 
       {/* RODAPÉ */}
-      <footer style={{
-        backgroundColor: "#111",
-        color: "#aaa",
-        padding: "20px",
-        textAlign: "center",
-        fontSize: "14px"
-      }}>
-        © {new Date().getFullYear()} CT Construtower LTDA – Todos os direitos reservados
+      <footer className="footer">
+        <p><strong>CT Construtower LTDA</strong></p>
+        <p>São Vicente - SP</p>
+        <p>WhatsApp: (13) 99791-4843</p>
+        <p>Email: ba728632@gmail.com</p>
+        <p>Atendimento em todo o Estado de São Paulo</p>
       </footer>
-
     </div>
-  )
+  );
 }
-
-export default App
