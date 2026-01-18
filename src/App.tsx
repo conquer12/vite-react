@@ -1,65 +1,105 @@
 function App() {
   return (
-    <div style={{ fontFamily: "Arial, sans-serif", margin: 0, padding: 0 }}>
+    <div style={{ fontFamily: "Arial, sans-serif" }}>
 
-      {/* TOPO */}
-      <header style={{
-        backgroundColor: "#0A3D91",
-        color: "white",
-        padding: "30px",
+      {/* HERO */}
+      <section style={{
+        background: "linear-gradient(135deg, #0B3C8A, #0A5ED7)",
+        color: "#fff",
+        padding: "90px 20px",
         textAlign: "center"
       }}>
-        <h1>CT Construtower LTDA</h1>
-        <p>Construindo seus sonhos</p>
-      </header>
+        <h1 style={{ fontSize: "48px", marginBottom: "10px" }}>
+          CT Construtower LTDA
+        </h1>
+        <p style={{ fontSize: "20px", opacity: 0.9 }}>
+          Construindo seus sonhos com qualidade e confiança
+        </p>
+        <a
+          href="https://wa.me/55SEUNUMEROAQUI"
+          style={{
+            display: "inline-block",
+            marginTop: "30px",
+            backgroundColor: "#fff",
+            color: "#0B3C8A",
+            padding: "15px 30px",
+            borderRadius: "6px",
+            textDecoration: "none",
+            fontWeight: "bold"
+          }}
+        >
+          Solicitar Orçamento
+        </a>
+      </section>
 
       {/* SOBRE */}
-      <section style={{ padding: "30px" }}>
+      <section style={{ padding: "60px 20px", maxWidth: "1100px", margin: "auto" }}>
         <h2>Sobre a Empresa</h2>
-        <p>
-          A CT Construtower LTDA atua no setor da construção civil,
-          oferecendo soluções completas com qualidade, segurança
-          e compromisso para seus clientes.
+        <p style={{ fontSize: "17px", lineHeight: 1.6 }}>
+          A <strong>CT Construtower LTDA</strong> atua no setor da construção civil,
+          oferecendo soluções completas em obras residenciais e comerciais,
+          reformas e acabamentos, sempre com qualidade, segurança e compromisso.
         </p>
       </section>
 
       {/* SERVIÇOS */}
-     <section style={{
-  backgroundColor: "#f4f6f8",
-  padding: "30px",
-  color: "#000"
-}}>
-  <h2>Nossos Serviços</h2>
-  <ul>
+      <section style={{ backgroundColor: "#f4f6f8", padding: "60px 20px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: "40px" }}>
+          Nossos Serviços
+        </h2>
 
-          <li>Construção residencial</li>
-          <li>Construção comercial</li>
-          <li>Reformas em geral</li>
-          <li>Acabamento</li>
-          <li>Pintura</li>
-          <li>Elétrica e Hidráulica</li>
-          <li>Outros serviços personalizados</li>
-        </ul>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          gap: "20px",
+          maxWidth: "1100px",
+          margin: "auto"
+        }}>
+          {[
+            "Construção Residencial",
+            "Construção Comercial",
+            "Reformas",
+            "Acabamento",
+            "Pintura",
+            "Elétrica e Hidráulica",
+            "Serviços Personalizados"
+          ].map((servico) => (
+            <div key={servico} style={{
+              backgroundColor: "#fff",
+              padding: "25px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 10px rgba(0,0,0,0.08)"
+            }}>
+              <h3>{servico}</h3>
+              <p>
+                Atendimento profissional com equipe qualificada e materiais de
+                qualidade.
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* ATENDIMENTO */}
-      <section style={{ padding: "30px" }}>
-        <h2>Área de Atendimento</h2>
-        <p>Atendemos toda a região do Estado de São Paulo.</p>
-      </section>
-
-      {/* CONTATO */}
-      <section style={{ padding: "30px", textAlign: "center" }}>
+      {/* CTA FINAL */}
+      <section style={{
+        backgroundColor: "#0B3C8A",
+        color: "#fff",
+        padding: "50px 20px",
+        textAlign: "center"
+      }}>
+        <h2>Construa com quem entende</h2>
+        <p>Entre em contato agora e solicite seu orçamento</p>
         <a
-          href="https://wa.me/5513997914843"
-          target="_blank"
+          href="https://wa.me/55SEUNUMEROAQUI"
           style={{
-            backgroundColor: "#0A3D91",
-            color: "#fff",
-            padding: "15px 25px",
-            textDecoration: "none",
+            display: "inline-block",
+            marginTop: "20px",
+            backgroundColor: "#fff",
+            color: "#0B3C8A",
+            padding: "14px 28px",
             borderRadius: "6px",
-            fontSize: "16px"
+            textDecoration: "none",
+            fontWeight: "bold"
           }}
         >
           Falar no WhatsApp
@@ -68,17 +108,17 @@ function App() {
 
       {/* RODAPÉ */}
       <footer style={{
-        backgroundColor: "#0A3D91",
-        color: "white",
+        backgroundColor: "#111",
+        color: "#aaa",
+        padding: "20px",
         textAlign: "center",
-        padding: "15px"
+        fontSize: "14px"
       }}>
-        © {new Date().getFullYear()} CT Construtower LTDA
+        © {new Date().getFullYear()} CT Construtower LTDA – Todos os direitos reservados
       </footer>
 
     </div>
-  );
+  )
 }
 
-export default App;
-
+export default App
