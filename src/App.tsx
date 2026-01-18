@@ -1,50 +1,66 @@
 import "./App.css";
+import logo from "./assets/logo.png";
 
 export default function App() {
   return (
     <div>
 
-      {/* TOPO */}
-      <header className="hero">
-        <h1>CT Construtower LTDA</h1>
-        <p>Construção Residencial e Comercial</p>
-        <span>Construindo seus sonhos com qualidade e segurança</span>
-        <a href="#orcamento" className="btn">Solicitar Orçamento</a>
+      {/* HEADER */}
+      <header className="header">
+        <img src={logo} className="logo" />
+        <nav>
+          <a href="#servicos">Serviços</a>
+          <a href="#portfolio">Portfólio</a>
+          <a href="#orcamento">Orçamento</a>
+          <a href="#contato">Contato</a>
+        </nav>
       </header>
+
+      {/* HERO */}
+      <section className="hero">
+        <h1>CT Construtower LTDA</h1>
+        <p>Construção • Regularização • Projetos • Aprovações</p>
+        <span>Construindo seus sonhos com qualidade, segurança e legalidade</span>
+        <a href="#orcamento" className="btn">Solicitar Orçamento</a>
+      </section>
 
       {/* SOBRE */}
       <section className="section">
-        <h2>Sobre a Empresa</h2>
+        <h2>Sobre a CT Construtower</h2>
         <p>
-          A <strong>CT Construtower LTDA</strong> atua no setor da construção civil,
-          oferecendo soluções completas em obras residenciais, comerciais,
-          reformas e acabamentos. Trabalhamos com qualidade, segurança,
-          compromisso e respeito ao cliente, atendendo todo o Estado de São Paulo.
+          A <strong>CT Construtower LTDA</strong> é uma empresa especializada em
+          construção civil, oferecendo soluções completas para obras
+          residenciais e comerciais, regularização de imóveis, elaboração de
+          projetos e aprovações junto aos órgãos competentes.
         </p>
       </section>
 
       {/* SERVIÇOS */}
-      <section className="section light">
+      <section id="servicos" className="section light">
         <h2>Nossos Serviços</h2>
-        <ul className="services">
-          <li>Construção Residencial</li>
-          <li>Construção Comercial</li>
-          <li>Reformas em Geral</li>
-          <li>Acabamento</li>
-          <li>Pintura</li>
-          <li>Elétrica e Hidráulica</li>
-          <li>Outros Serviços</li>
-        </ul>
+
+        <div className="services-grid">
+          <div className="service">Construção Residencial</div>
+          <div className="service">Construção Comercial</div>
+          <div className="service">Reformas e Ampliações</div>
+          <div className="service">Acabamentos de Alto Padrão</div>
+          <div className="service">Pintura Profissional</div>
+          <div className="service">Elétrica e Hidráulica</div>
+          <div className="service">Regularização de Imóveis</div>
+          <div className="service">Projetos Arquitetônicos</div>
+          <div className="service">Aprovações em Prefeituras</div>
+        </div>
       </section>
 
       {/* PORTFÓLIO */}
-      <section className="section">
+      <section id="portfolio" className="section">
         <h2>Obras Realizadas</h2>
-        <p>Alguns de nossos trabalhos executados</p>
+        <p>Alguns projetos executados com qualidade e excelência</p>
+
         <div className="portfolio">
-          <div className="obra">Foto da Obra</div>
-          <div className="obra">Foto da Obra</div>
-          <div className="obra">Foto da Obra</div>
+          <div className="obra">Obra Residencial</div>
+          <div className="obra">Obra Comercial</div>
+          <div className="obra">Reforma</div>
         </div>
       </section>
 
@@ -58,9 +74,10 @@ export default function App() {
             e.preventDefault();
             const f = e.target as any;
 
-            const texto = `Olá, me chamo ${f.nome.value}.
-Serviço: ${f.servico.value}.
-Mensagem: ${f.mensagem.value}.
+            const texto = `Olá, gostaria de um orçamento.
+Nome: ${f.nome.value}
+Serviço: ${f.servico.value}
+Mensagem: ${f.mensagem.value}
 WhatsApp: ${f.whatsapp.value}`;
 
             window.open(
@@ -70,14 +87,20 @@ WhatsApp: ${f.whatsapp.value}`;
         >
           <input name="nome" placeholder="Seu nome" required />
           <input name="whatsapp" placeholder="Seu WhatsApp" required />
-          <input name="servico" placeholder="Tipo de serviço" />
-          <textarea name="mensagem" placeholder="Descreva sua obra"></textarea>
+          <select name="servico">
+            <option>Construção</option>
+            <option>Reforma</option>
+            <option>Regularização de Imóvel</option>
+            <option>Projeto / Aprovação</option>
+            <option>Outros</option>
+          </select>
+          <textarea name="mensagem" placeholder="Descreva sua necessidade"></textarea>
           <button>Enviar pelo WhatsApp</button>
         </form>
       </section>
 
-      {/* RODAPÉ */}
-      <footer className="footer">
+      {/* CONTATO */}
+      <footer id="contato" className="footer">
         <p><strong>CT Construtower LTDA</strong></p>
         <p>São Vicente – SP</p>
         <p>WhatsApp: (13) 99791-4843</p>
