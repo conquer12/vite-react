@@ -24,9 +24,14 @@ function App() {
       </section>
 
       {/* SERVIÇOS */}
-      <section style={{ backgroundColor: "#f4f6f8", padding: "30px" }}>
-        <h2>Nossos Serviços</h2>
-        <ul>
+     <section style={{
+  backgroundColor: "#f4f6f8",
+  padding: "30px",
+  color: "#000"
+}}>
+  <h2>Nossos Serviços</h2>
+  <ul>
+
           <li>Construção residencial</li>
           <li>Construção comercial</li>
           <li>Reformas em geral</li>
