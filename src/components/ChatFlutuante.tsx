@@ -42,15 +42,15 @@ export default function ChatFlutuante() {
       {aberto && (
         <section className="chat-window" aria-label="Chat de atendimento">
           <header className="chat-header">
-            <img src="https://project--98ca8037-882c-4cdf-9ed6-99ba5eaa409e-dev.lovable.app/api/public/ext-asset?id=4071cc67-cf3a-48e9-9580-3489a0c2ccff" alt="Assistente do atendimento" />
-            <div><strong>MercalA</strong><span>Assistente de MercalA</span></div>
-            <button className="chat-more" aria-label="Mais opções">⋮</button>
+            <img src="https://project--98ca8037-882c-4cdf-9ed6-99ba5eaa409e-dev.lovable.app/api/public/ext-asset?id=9ef69279-db15-48b8-aea9-30aebba8c5df" alt="Assistente do atendimento" />
+            <div><strong>MercalA</strong><span><i className="chat-status" aria-hidden="true" /> Assistente online</span></div>
+            <button className="chat-more" onClick={() => setMensagem("Preciso de ajuda") } aria-label="Mais opções">⋮</button>
             <button className="chat-close" onClick={() => setAberto(false)} aria-label="Fechar chat">×</button>
           </header>
           <div className="chat-content">
-            <div className="chat-greeting">Olá! 👋 Como posso ajudar?</div>
+            <div className="chat-greeting"><strong>Olá! 👋</strong><span>Como posso ajudar você hoje?</span></div>
             {mensagens.map((item, index) => <div className="chat-message" key={`${item}-${index}`}>{item}</div>)}
-            <span className="chat-label">SUGESTÕES</span>
+            <span className="chat-label">COMO POSSO AJUDAR?</span>
             <div className="chat-suggestions">
               {sugestoes.map(([icone, texto]) => (
                 <button key={texto} onClick={() => escolherSugestao(texto)}><b>{icone}</b>{texto}</button>
