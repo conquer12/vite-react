@@ -10,6 +10,7 @@ export default function App() {
           <nav>
             <a href="#servicos">Serviços</a>
             <a href="#portfolio">Portfólio</a>
+            <a href="#loja">Loja</a>
             <a href="#orcamento" className="nav-btn">Orçamento</a>
           </nav>
         </div>
@@ -84,6 +85,37 @@ export default function App() {
             <div className="obra-premium">Residencial</div>
             <div className="obra-premium">Comercial</div>
             <div className="obra-premium">Reforma</div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOJA */}
+      <section id="loja" className="section soft">
+        <div className="container">
+          <h2>Loja Demonstrativa</h2>
+          <p className="subtitle">Produtos conhecidos para sua obra, reforma e manutenção</p>
+          <div className="products-grid">
+            {[
+              { icon: "🧱", name: "Tijolo Cerâmico 8 Furos", category: "Materiais de construção", description: "Resistente e ideal para paredes e divisórias.", price: "R$ 1,19 / unidade" },
+              { icon: "🪣", name: "Cimento CP II 50kg", category: "Materiais de construção", description: "Qualidade para concreto, argamassa e fundações.", price: "R$ 39,90" },
+              { icon: "🎨", name: "Tinta Acrílica Suvinil 18L", category: "Pintura", description: "Acabamento premium para ambientes internos e externos.", price: "R$ 329,90" },
+              { icon: "🔧", name: "Furadeira Bosch 500W", category: "Ferramentas", description: "Praticidade e potência para seus projetos.", price: "R$ 249,90" }
+            ].map((product) => (
+              <article className="product-card" key={product.name}>
+                <div className="product-icon" aria-hidden="true">{product.icon}</div>
+                <span className="product-badge">{product.category}</span>
+                <h3>{product.name}</h3>
+                <p>{product.description}</p>
+                <strong className="product-price">{product.price}</strong>
+                <button
+                  type="button"
+                  className="product-action"
+                  onClick={() => window.open(`https://wa.me/5513997914843?text=${encodeURIComponent(`Olá, gostaria de saber mais sobre: ${product.name}`)}`, "_blank")}
+                >
+                  Consultar produto
+                </button>
+              </article>
+            ))}
           </div>
         </div>
       </section>
