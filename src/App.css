@@ -5,15 +5,14 @@
 body {
   margin: 0;
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  background: #f5f7fa;
-  color: #1f2937;
+  background: #f7fafc;
+  color: #334e68;
 }
 
 /* LAYOUT */
 .container {
-  max-width: 1200px;
+  width: min(1120px, calc(100% - 40px));
   margin: auto;
-  padding: 0 20px;
 }
 
 .narrow {
@@ -21,7 +20,12 @@ body {
 }
 
 .section {
-  padding: 90px 0;
+  padding: clamp(58px, 8vw, 96px) 0;
+}
+
+.section h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
 }
 
 .soft {
@@ -30,28 +34,37 @@ body {
 
 /* HEADER */
 .topbar {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #e6eef2;
+  backdrop-filter: blur(14px);
 }
 
 .topbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  min-height: 72px;
+  gap: 20px;
 }
 
 .logo {
-  height: 60px;
+  height: 52px;
+  width: auto;
+  object-fit: contain;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 22px;
   text-decoration: none;
   font-weight: 600;
+  color: #185abc;
+  transition: color 0.2s;
+}
+
+nav a:hover {
   color: #0b3c8c;
 }
 
@@ -64,13 +77,9 @@ nav a {
 
 /* HERO */
 .hero-premium {
-  background: linear-gradient(
-    135deg,
-    #0b3c8c,
-    #0a5ed7
-  );
+  background: radial-gradient(circle at 80% 15%, #4d9cf5 0, transparent 32%), linear-gradient(135deg, #0b3c8c, #123f91 60%, #0a5ed7);
   color: white;
-  padding: 140px 20px;
+  padding: clamp(92px, 14vw, 150px) 20px;
   text-align: center;
 }
 
@@ -80,8 +89,9 @@ nav a {
 }
 
 .hero-content p {
-  font-size: 22px;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
   font-weight: 600;
+  opacity: 0.96;
 }
 
 .hero-content span {
@@ -111,9 +121,16 @@ nav a {
 
 .service-card {
   background: white;
-  padding: 35px;
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  padding: 30px;
+  border: 1px solid #e5edf2;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(16, 42, 67, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(16, 42, 67, 0.1);
 }
 
 .service-card h3 {
@@ -148,9 +165,20 @@ nav a {
 .form-premium input,
 .form-premium select,
 .form-premium textarea {
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
+  padding: 15px 16px;
+  border-radius: 10px;
+  border: 1px solid #d9e2ec;
+  background: #fff;
+  color: #334e68;
+  font: inherit;
+  outline: none;
+}
+
+.form-premium input:focus,
+.form-premium select:focus,
+.form-premium textarea:focus {
+  border-color: #3b82d0;
+  box-shadow: 0 0 0 3px #3b82d020;
 }
 
 .form-premium button {
@@ -165,9 +193,40 @@ nav a {
 
 /* FOOTER */
 .footer-premium {
-  background: #0b3c8c;
+  background: #102a43;
   color: white;
   text-align: center;
-  padding: 45px 20px;
-  font-size: 15px;
+  padding: 42px 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 28px, 1120px);
+  }
+
+  .topbar .container {
+    min-height: 64px;
+  }
+
+  .logo {
+    height: 42px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 0.82rem;
+  }
+
+  nav a:not(.nav-btn) {
+    display: none;
+  }
+
+  .nav-btn {
+    padding: 9px 12px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
 }
