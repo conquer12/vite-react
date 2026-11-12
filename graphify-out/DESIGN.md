@@ -1,6 +1,6 @@
 # Design system
 
-Generated: 2026-11-12T23:45:49.427964+00:00
+Generated: 2026-11-12T23:47:56.034336+00:00
 
 ## Tokens
 - No CSS custom properties found.
@@ -9,4 +9,4 @@ Generated: 2026-11-12T23:45:49.427964+00:00
 - No shadcn/ui components found.
 
 ## Project components
-- No project components found.
+- src/components/ChatFlutuante.tsx

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T23:45:49.427964+00:00",
+  "generated_at": "2026-11-12T23:47:56.034336+00:00",
   "files": [
     {
       "path": "index.html",
@@ -56,6 +56,14 @@
     {
       "path": ".lovasiri/sync.json",
       "bytes": 80
+    },
+    {
+      "path": "src/components/ChatFlutuante.tsx",
+      "bytes": 2724
+    },
+    {
+      "path": "src/components/ChatFlutuante.css",
+      "bytes": 2761
     }
   ],
   "dependencies": [
@@ -98,6 +106,10 @@
     {
       "source": "src/main.tsx",
       "target": "./App.tsx"
+    },
+    {
+      "source": "src/components/ChatFlutuante.tsx",
+      "target": "react"
     }
   ]
 }
