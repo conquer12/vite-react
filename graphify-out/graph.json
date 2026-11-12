@@ -1,10 +1,6 @@
 {
-  "generated_at": "2026-11-12T23:56:32.639344+00:00",
+  "generated_at": "2026-11-12T23:58:24.522412+00:00",
   "files": [
-    {
-      "path": "tsconfig.node.json",
-      "bytes": 479
-    },
     {
       "path": "index.html",
       "bytes": 1098
@@ -14,56 +10,60 @@
       "bytes": 681
     },
     {
-      "path": "tsconfig.app.json",
-      "bytes": 552
-    },
-    {
       "path": "vite.config.ts",
       "bytes": 163
-    },
-    {
-      "path": "README.md",
-      "bytes": 801
-    },
-    {
-      "path": "eslint.config.js",
-      "bytes": 734
     },
     {
       "path": "tsconfig.json",
       "bytes": 119
     },
     {
-      "path": "src/index.css",
-      "bytes": 1090
+      "path": "README.md",
+      "bytes": 801
     },
     {
-      "path": "src/App.tsx",
-      "bytes": 4507
+      "path": "tsconfig.node.json",
+      "bytes": 479
     },
     {
-      "path": "src/App.css",
-      "bytes": 3720
+      "path": "eslint.config.js",
+      "bytes": 734
+    },
+    {
+      "path": "tsconfig.app.json",
+      "bytes": 552
     },
     {
       "path": "src/main.tsx",
       "bytes": 230
     },
     {
+      "path": "src/App.css",
+      "bytes": 5076
+    },
+    {
+      "path": "src/index.css",
+      "bytes": 1090
+    },
+    {
       "path": "src/vite-env.d.ts",
       "bytes": 38
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 6430
     },
     {
       "path": ".lovasiri/sync.json",
       "bytes": 80
     },
     {
-      "path": "src/components/ChatFlutuante.css",
-      "bytes": 4526
-    },
-    {
       "path": "src/components/ChatFlutuante.tsx",
       "bytes": 3082
+    },
+    {
+      "path": "src/components/ChatFlutuante.css",
+      "bytes": 4526
     }
   ],
   "dependencies": [
