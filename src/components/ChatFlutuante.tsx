@@ -31,9 +31,13 @@ export default function ChatFlutuante() {
   return (
     <div className={`chat-widget ${aberto ? "is-open" : "is-closed"}`}>
       {!aberto && (
-        <button className="chat-launcher" onClick={() => setAberto(true)} aria-label="Abrir chat">
-          <span>▰</span>
-        </button>
+        <div className="chat-launcher-wrap">
+          <button className="chat-launcher" onClick={() => setAberto(true)} aria-label="Abrir chat">
+            <span aria-hidden="true">▰</span>
+            <i className="chat-notification" aria-hidden="true" />
+          </button>
+          <span className="chat-launcher-label">MERCA IA</span>
+        </div>
       )}
       {aberto && (
         <section className="chat-window" aria-label="Chat de atendimento">
