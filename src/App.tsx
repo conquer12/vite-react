@@ -1,6 +1,4 @@
 import "./App.css";
-import logo from "./assets/logo.png";
-
 export default function App() {
   return (
     <div className="app">
