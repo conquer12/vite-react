@@ -1,12 +1,71 @@
 # Design system
 
-Generated: 2026-11-08T23:49:10.820698+00:00
+Generated: 2026-11-13T00:17:42.313233+00:00
 
 ## Tokens
-- No CSS custom properties found.
+- --color-background: var(--background) (src/styles.css)
+- --color-foreground: var(--foreground) (src/styles.css)
+- --color-card: var(--card) (src/styles.css)
+- --color-card-foreground: var(--card-foreground) (src/styles.css)
+- --color-primary: var(--primary) (src/styles.css)
+- --color-primary-foreground: var(--primary-foreground) (src/styles.css)
+- --color-secondary: var(--secondary) (src/styles.css)
+- --color-secondary-foreground: var(--secondary-foreground) (src/styles.css)
+- --color-muted: var(--muted) (src/styles.css)
+- --color-muted-foreground: var(--muted-foreground) (src/styles.css)
+- --color-accent: var(--accent) (src/styles.css)
+- --color-accent-foreground: var(--accent-foreground) (src/styles.css)
+- --color-border: var(--border) (src/styles.css)
+- --color-ring: var(--ring) (src/styles.css)
+- --color-destructive: var(--destructive) (src/styles.css)
+- --color-destructive-foreground: var(--destructive-foreground) (src/styles.css)
+- --radius-sm: calc(var(--radius) - 4px) (src/styles.css)
+- --radius-md: calc(var(--radius) - 2px) (src/styles.css)
+- --radius-lg: var(--radius) (src/styles.css)
+- --radius-xl: calc(var(--radius) + 4px) (src/styles.css)
+- --radius-full: 9999px (src/styles.css)
+- --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 10px 20px -5px rgb(0 0 0 / 0.1) (src/styles.css)
+- --shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) (src/styles.css)
+- --shadow-glow-primary: 0 0 20px -5px color-mix(in srgb, var(--primary), transparent 70%) (src/styles.css)
+- --font-sans: 'Manrope', sans-serif (src/styles.css)
+- --font-display: 'Sora', sans-serif (src/styles.css)
+- --radius: 0.75rem (src/styles.css)
+- --background: oklch(1 0 0) (src/styles.css)
+- --foreground: oklch(0.145 0.006 285.823) (src/styles.css)
+- --card: oklch(1 0 0) (src/styles.css)
+- --card-foreground: oklch(0.145 0.006 285.823) (src/styles.css)
+- --primary: oklch(0.55 0.2 265) (src/styles.css)
+- --primary-foreground: oklch(0.98 0 0) (src/styles.css)
+- --secondary: oklch(0.96 0.01 260) (src/styles.css)
+- --secondary-foreground: oklch(0.55 0.2 265) (src/styles.css)
+- --muted: oklch(0.96 0.01 260) (src/styles.css)
+- --muted-foreground: oklch(0.55 0.05 280) (src/styles.css)
+- --accent: oklch(0.96 0.05 265) (src/styles.css)
+- --accent-foreground: oklch(0.55 0.2 265) (src/styles.css)
+- --border: oklch(0.90 0.01 260) (src/styles.css)
+- --ring: oklch(0.55 0.2 265) (src/styles.css)
+- --destructive: oklch(0.55 0.15 25) (src/styles.css)
+- --gradient-brand: linear-gradient(135deg, oklch(0.55 0.2 265) 0%, oklch(0.7 0.15 195) 100%) (src/styles.css)
+- --background: oklch(0.12 0.01 285) (src/styles.css)
+- --foreground: oklch(0.98 0 0) (src/styles.css)
+- --card: oklch(0.15 0.01 285) (src/styles.css)
+- --card-foreground: oklch(0.98 0 0) (src/styles.css)
+- --primary: oklch(0.65 0.18 270) (src/styles.css)
+- --primary-foreground: oklch(0.15 0.01 285) (src/styles.css)
+- --secondary: oklch(0.20 0.02 285) (src/styles.css)
+- --secondary-foreground: oklch(0.85 0.15 270) (src/styles.css)
+- --muted: oklch(0.20 0.02 285) (src/styles.css)
+- --muted-foreground: oklch(0.70 0.02 280) (src/styles.css)
+- --accent: oklch(0.20 0.05 270) (src/styles.css)
+- --accent-foreground: oklch(0.98 0 0) (src/styles.css)
+- --border: oklch(0.25 0.02 285) (src/styles.css)
+- --ring: oklch(0.65 0.18 270) (src/styles.css)
+- --destructive: oklch(0.55 0.2 20) (src/styles.css)
+- --destructive-foreground: oklch(0.98 0 0) (src/styles.css)
+- --gradient-brand: linear-gradient(135deg, oklch(0.65 0.18 270) 0%, oklch(0.75 0.15 195) 100%) (src/styles.css)
 
 ## UI components
 - No shadcn/ui components found.
 
 ## Project components
-- No project components found.
+- src/components/ChatFlutuante.tsx
